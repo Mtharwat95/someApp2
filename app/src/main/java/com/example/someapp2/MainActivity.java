@@ -9,7 +9,7 @@ import android.widget.TextView;
 public class MainActivity extends AppCompatActivity {
     static {
         Log.e("jni", "starting");
-        System.loadLibrary("new_code");
+        System.loadLibrary("testLib");
         Log.e("jni", "finished");
     }
     @Override
@@ -17,9 +17,9 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         TextView tvv = findViewById(R.id.tv);
-        tvv.setOnClickListener(view -> tvv.setText(NewMethod()));
+        tvv.setOnClickListener(view -> tvv.setText(get_String()));
     }
 
-    public native String NewMethod();
+    public native String get_String();
 
 }

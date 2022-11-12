@@ -29,6 +29,12 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+    sourceSets {
+        main {
+            jni.srcDirs = ['/Volumes/FlutterWork/SomeApp2/app/src/main/jniLibs']
+            jniLibs.srcDir '/Volumes/FlutterWork/SomeApp2/app/src/main/jniLibs'
+        }
+    }
 }
 
 dependencies {
